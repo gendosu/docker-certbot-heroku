@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  #
+  # メインコンテナ
+  #
+  main:
+    build: .
+
+    volumes:
+      - .:/products
+      - ./letsencrypt:/etc/letsencrypt
+
+    ports:
+      - "80:80"
+
